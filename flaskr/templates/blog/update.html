@@ -17,3 +17,13 @@
         <input type="submit" class="danger" value="Delete" onclick="return confirm('Are you sure?')">
     </form>
 {% endblock %}
+
+{% block script %}
+    <script>
+        $(document).ready(function () {
+            CKEDITOR.replace("body", {
+                uiColor: '#9AB8F3'
+            });
+        })
+    </script>
+{% endblock %}

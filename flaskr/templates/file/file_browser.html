@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block header %}
+    <h1>{% block title %}Image{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <div id="file-explorer">
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script>
+        var func_num = {{ func_num }};
+        $(document).ready(function () {
+            $("#file-explorer").load("/file/image");
+            $("#file-explorer").on("click", "img", function () {
+                var file_url = "/file/show_thumbnail/" + $(this).attr("title");
+                window.opener.CKEDITOR.tools.callFunction(func_num, file_url);
+                window.close();
+                console.log("click")
+            }).hover(function() {
+                    $(this).css('cursor', 'pointer');
+                });;
+        })
+    </script>
+{% endblock %}

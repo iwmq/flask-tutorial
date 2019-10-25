@@ -1,0 +1,3 @@
+    {% for img in imgs %}
+    <img src="{{ url_for('file.show_thumbnail', name=img) }}" alt="thumbnail" title="{{ img }}">
+    {% endfor %}

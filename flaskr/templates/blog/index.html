@@ -17,7 +17,11 @@
                     <a href="{{ url_for('blog.update', id=post['id']) }}" class="action">Update</a>
                 {% endif %}
             </header>
-            <p class="body">{{ post["body"] }}</p>
+            <div class="body">
+    
+                {{ post["body"]|safe }}
+         
+            </div>
         </article>
         {% if not loop.last %}
             <hr>

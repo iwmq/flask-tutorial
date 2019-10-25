@@ -13,3 +13,16 @@
         <input type="submit" value="Save">
     </form>
 {% endblock %}
+
+{% block script %}
+    <script>
+        $(document).ready(function () {
+            CKEDITOR.replace("body", {
+                filebrowserBrowseUrl: "/file/file_browser",
+                filebrowserWindowWidth: 800,
+                filebrowserWindowHeight: 600,
+                uiColor: '#9AB8F3'
+            });
+        })
+    </script>
+{% endblock %}

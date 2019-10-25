@@ -1,7 +1,6 @@
 import os
 from flask import Flask
 
-
 def create_app(test_config=None):
     # create and config the app
     app = Flask(__name__, instance_relative_config=True)
@@ -34,6 +33,9 @@ def create_app(test_config=None):
     
     from . import auth
     app.register_blueprint(auth.bp)
+
+    from . import file
+    app.register_blueprint(file.bp)
 
     from . import blog
     app.register_blueprint(blog.bp)
