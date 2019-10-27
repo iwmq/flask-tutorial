@@ -6,4 +6,4 @@ def test_config():
 
 def test_hello(client):
     response = client.get("/hello")
-    assert response == b"Hello from flask!"
+    assert response.data == b"Hello from flask!"

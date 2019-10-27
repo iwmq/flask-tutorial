@@ -5,4 +5,4 @@ VALUES
 
 INSERT INTO post (title, body, author_id, created)
 VALUES
-("test title", "test" || x'0a' || "body", 1, "2019-10-25 12:00");
+("test title", "test" || x'0a' || "body", 1, "2019-10-25 12:00:00");

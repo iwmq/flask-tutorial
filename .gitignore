@@ -13,3 +13,5 @@ build/
 
 flaskr/static/ckeditor/
 flaskr/static/js/
+
+instance/uploads/
