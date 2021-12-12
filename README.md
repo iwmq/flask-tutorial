@@ -3,7 +3,14 @@ This is my flask project playground.
 How to run?
 -----------
 
-On Windows:
+On Powershell:
+```
+> $env:FLASK_APP="flaskr"
+> $env:FLASK_ENV="development"
+> flask run
+```
+
+On Windows cmd:
 ```
 > set FLASK_APP=flaskr
 > set FLASK_ENV=development
