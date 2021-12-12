@@ -1,5 +1,9 @@
 This is my flask project playground.
 
+How to install?
+--------------
+To install the flaskr app, run `pip install -e .` in the current directory.
+
 How to run?
 -----------
 
